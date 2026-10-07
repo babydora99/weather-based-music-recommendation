@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Based Music Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Weather Music</h1>
+            <p class="subtitle">Let the weather set the mood for your music</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input id="location" type="text" placeholder="Enter your city..." autocomplete="off">
+                <button id="get-music">
+                    <span class="btn-text">Get Music</span>
+                    <span class="btn-icon">🎧</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching your weather and music...</p>
+        </div>
+
+        <div id="weather-info" class="weather-info hidden">
+            <div class="weather-card">
+                <div class="weather-icon" id="weather-icon">☀️</div>
+                <div class="weather-details">
+                    <h2 id="city-name">City Name</h2>
+                    <p id="weather-condition">Weather Condition</p>
+                    <p id="temperature">Temperature</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="music-recommendations" class="music-recommendations hidden">
+            <h2>🎶 Recommended Songs</h2>
+            <div id="songs-grid" class="songs-grid"></div>
+        </div>
+
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
